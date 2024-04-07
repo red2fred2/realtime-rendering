@@ -1,0 +1,44 @@
+import { Button, CheckBox, ComboBox, Slider, SpinBox, Switch, GridBox, ProgressIndicator, Spinner, ListView, AboutSlint } from "std-widgets.slint";
+export component MainWindow inherits Window {
+	GridLayout {
+		x: 20px;
+		Row {
+			Button {
+				text: "Button";
+			}
+			CheckBox {
+				text: "CheckBox";
+			}
+			ComboBox {
+				model: ["first", "second", "third"];
+			}
+		}
+		Row {
+			Slider {
+				width: 357px;
+				height: 34px;
+				minimum: 0;
+				value: 42;
+				maximum: 100;
+			}
+			SpinBox {
+				minimum: 0;
+				value: 42;
+				maximum: 100;
+			}
+			Text {
+				width: 87px;
+				height: 30px;
+				text: "Text";
+			}
+			Switch {
+				text: "Switch";
+			}
+		}
+
+	    ProgressIndicator { }
+	    Spinner {
+			progress: 50%;
+		}
+	}
+}
